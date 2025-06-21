@@ -10,14 +10,8 @@ st.set_page_config(layout="wide", page_title="رفيقي")
 
 # Initialize Supabase client
 @st.cache_resource
-# def init_supabase():
-#     return create_client(st.secrets.supabase.url, st.secrets.supabase.key)
-
 def init_supabase():
-    # For testing only - replace with your actual credentials
-    url = "https://dfdizozqvlrqsmrygvps.supabase.co"
-    key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRmZGl6b3pxdmxycXNtcnlndnBzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA0NTQyOTEsImV4cCI6MjA2NjAzMDI5MX0.Hux-EOMFaGYvNH7HZrn-ZfDbW9nNLGovF019ILL_9mI"
-    return create_client(url, key)
+    return create_client(st.secrets.supabase.url, st.secrets.supabase.key)
 
 
 supabase: Client = init_supabase()
